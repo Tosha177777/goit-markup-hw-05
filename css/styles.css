@@ -114,7 +114,7 @@ img {
 .navi::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;
@@ -579,6 +579,7 @@ img {
 
   transition: background-color 250ms var(--transition-timing-function),
     color 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function),
     box-shadow 250ms var(--transition-timing-function);
 }
 .buttons:hover,
@@ -751,7 +752,21 @@ img {
   align-items: center;
   cursor: pointer;
 
+  color: var(--headline-color);
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function),
+    color 250ms var(--transition-timing-function);
+}
+
+.modal-close-btn:hover {
+  border: 1px solid transparent;
+  background-color: var(--pressed-state);
+  color: var(--light-mode-dialogs);
+}
+
+.close-btn-svg {
+  fill: currentColor;
 }
 
 /*#endregion backdrop */
